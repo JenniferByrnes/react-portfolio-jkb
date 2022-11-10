@@ -1,22 +1,41 @@
-import byrnesImage from "../assets/images/JByrnesPhoto.jpeg";
+
+import PhotoCard from "../components/PhotoCard";
+import IntroCard from "../components/IntroCard";
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+
 export default function About() {
   return (
     <>
-      <h1>ABOUT ME</h1><div>
-        <div> Card with photo
-          <div>
-          <img src={byrnesImage}  style={{ minWidth: "350px", height: "350px" }} alt="Jennifer Byrnes"/>
-          </div>
-          <div>
-            skill icons
-          </div>
-        </div>
-        <div>
-          card with bio
-          <h2>Hi!</h2>
-          <p>elevator pitch</p>
-        </div>
-      </div>
+      <CssBaseline />
+      <Container maxWidth="lg">
+        <h1>ABOUT ME</h1>
+        <Box
+          sx={{
+            display: 'inline-flex',
+            justifyContent: 'space-around',
+            alignItems: 'center',
+            m: 1,
+            p: 1,
+          }}
+        >
+          <Box
+            sx={{
+              m: 1,
+              p: 1,
+            }}>
+            <PhotoCard></PhotoCard>
+          </Box>
+          <Box
+            sx={{
+              m: 1,
+              p: 1,
+            }}>
+            <IntroCard></IntroCard>
+          </Box>
+        </Box>
+      </Container>
     </>
   )
 }
