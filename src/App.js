@@ -10,11 +10,10 @@ export default function App() {
   return (
 
       <BrowserRouter sx={{
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-around'
-    }} >
+        minHeight: '100vh',
+        flexDirection: 'column',
+        justifyContent: 'space-around'
+      }} >
         <Header />
         <Routes>
           <Route path='/' element={<About />} />
